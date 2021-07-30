@@ -70,7 +70,7 @@ export const Checkbox: FC<CheckboxProps> = ({
         </div>
         <div className={`${rootClassName}_label`}>{children}</div>
         <input
-          className="tw-hidden"
+          className="hidden"
           data-testid={id}
           name={name || id}
           id={id}

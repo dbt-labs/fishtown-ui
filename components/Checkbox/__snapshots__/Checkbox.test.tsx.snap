@@ -31,7 +31,7 @@ exports[`Component Checkbox should render without label text 1`] = `
       class="fui-checkbox_label"
     />
     <input
-      class="tw-hidden"
+      class="hidden"
       data-testid="test"
       id="test"
       name="test"

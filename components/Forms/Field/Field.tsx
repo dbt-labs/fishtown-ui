@@ -41,10 +41,10 @@ export const Field: FC<FieldProps> = ({
 }): React.ReactElement => {
   const classNames = cx(
     'fui-field-row',
-    'tw-flex',
-    'tw-flex-row',
-    'tw-pt-2',
-    'tw-pb-2',
+    'flex',
+    'flex-row',
+    'pt-2',
+    'pb-2',
     className,
     {
       'fui-field-row--is-view': !isEdit,
@@ -69,12 +69,10 @@ export const Field: FC<FieldProps> = ({
         {hasInput && input && input(inputProps)}
         {!hasInput && hasChildren && children && children(inputProps)}
         {isEdit && (
-          <p className="tw-text-xs tw-text-gray-600 tw-italic tw-mt-1 tw-mb-1 tw-h-6">
-            {helpText}
-          </p>
+          <p className="text-xs text-gray-600 italic mt-1 mb-1 h-6">{helpText}</p>
         )}
         {isEdit && error && (
-          <ul className="tw-text-orange tw-list-disc tw-list-inside tw-text-xs tw-italic tw-mt-1 tw-mb-1">
+          <ul className="text-orange list-disc list-inside text-xs italic mt-1 mb-1">
             <li>{error}</li>
           </ul>
         )}

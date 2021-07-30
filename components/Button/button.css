@@ -1,22 +1,22 @@
 @layer components {
   /* these styles aren't currently used, but serve as an example of how we might use the .css files */
   .fui-button-basic {
-    @apply tw-bg-teal-500 tw-text-white tw-transition-colors tw-duration-200 tw-font-bold tw-py-2 tw-px-4 tw-rounded;
+    @apply bg-teal-500 text-white transition-colors duration-200 font-bold py-2 px-4 rounded;
   }
 
   .fui-button-basic:hover {
-    @apply tw-bg-teal-700;
+    @apply bg-teal-700;
   }
 }
 
 .fui-button-small {
-  @apply tw-py-1 tw-px-2;
+  @apply py-1 px-2;
 }
 
 .fui-button-medium {
-  @apply tw-py-2 tw-px-4;
+  @apply py-2 px-4;
 }
 
 .fui-button-large {
-  @apply tw-py-4 tw-px-8;
+  @apply py-4 px-8;
 }

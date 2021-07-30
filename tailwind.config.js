@@ -1,7 +1,6 @@
 const { colors, fontSize } = require('./old-default-theme');
 
 module.exports = {
-  prefix: 'tw-',
   theme: {
     extend: {
       colors: {

@@ -26,7 +26,7 @@ export const MyComponent: FC<Props> = () => ...
 
 ## Styling components
 
-We use tailwind as a utility CSS library with a customized prefix `tw-*`. In a lot of simple cases you might not need to build your own .css file for a component.
+We use tailwind as a utility CSS library with a customized prefix `*`. In a lot of simple cases you might not need to build your own .css file for a component.
 Just use the provided tailwind classes directly on markup.
 
 ### Bad
@@ -51,8 +51,8 @@ Just use the provided tailwind classes directly on markup.
 ### Good
 
 ```html
-<MyComponent className="tw-block tw-bg-teal-500">
-  <div className="tw-text-white">...</div>
+<MyComponent className="block bg-teal-500">
+  <div className="text-white">...</div>
 </MyComponent>
 ```
 
@@ -110,11 +110,11 @@ When writing CSS strive to use tailwind's _apply_ rather than writing css direct
 ```css
 @layer components {
   .my-class {
-    @apply tw-text-blue-500;
+    @apply text-blue-500;
   }
 
   .my-class--focused {
-    @apply tw-text-teal-500;
+    @apply text-teal-500;
   }
 }
 ```

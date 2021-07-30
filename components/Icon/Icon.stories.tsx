@@ -28,7 +28,7 @@ export const Basic: Story<IconProps> = Template.bind({});
 Basic.args = {
   icon: 'check',
   iconPrefix: 'fas',
-  className: 'tw-text-teal-500',
+  className: 'text-teal-500',
 };
 Basic.argTypes = {
   icon: {

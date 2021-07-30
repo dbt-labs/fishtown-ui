@@ -29,7 +29,7 @@ export interface SelectProps extends ReactSelectProps<SelectOption> {
 const Option: FC = (props: any) => (
   <components.Option {...props}>
     <div className="fui-select__option_value">
-      <Icon icon={faCheck} className="tw-inline" />
+      <Icon icon={faCheck} className="inline" />
       {props.data.label}
     </div>
     {props.data.meta && (

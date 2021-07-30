@@ -1,37 +1,37 @@
 @layer components {
   .fui-checkbox {
-    @apply tw-inline-block;
+    @apply inline-block;
   }
 
   .fui-checkbox label {
-    @apply tw-flex;
+    @apply flex;
   }
 
   .fui-checkbox_label {
-    @apply tw-leading-4 tw-text-sm tw-select-none;
+    @apply leading-4 text-sm select-none;
   }
 
   .fui-checkbox_checkbox {
-    @apply tw-flex tw-content-center tw-justify-center tw-w-4 tw-h-4 tw-mr-2 tw-border-gray-400 tw-border tw-border-solid tw-rounded-sm tw-text-white tw-cursor-pointer;
+    @apply flex content-center justify-center w-4 h-4 mr-2 border-gray-400 border border-solid rounded-sm text-white cursor-pointer;
   }
 
   .fui-checkbox_checkbox svg {
-    @apply tw-mt-px;
+    @apply mt-px;
   }
 
   .fui-checkbox--is-checked .fui-checkbox_checkbox {
-    @apply tw-border-transparent tw-bg-teal-500;
+    @apply border-transparent bg-teal-500;
   }
 
   .fui-checkbox--is-disabled .fui-checkbox_checkbox {
-    @apply tw-border-transparent tw-bg-gray-400 tw-cursor-default;
+    @apply border-transparent bg-gray-400 cursor-default;
   }
 
   .fui-checkbox--is-disabled .fui-checkbox_label {
-    @apply tw-opacity-75;
+    @apply opacity-75;
   }
 
   .fui-checkbox--is-disabled:not(.fui-checkbox--is-checked) .fui-checkbox_checkbox {
-    @apply tw-border-gray-200 tw-bg-transparent;
+    @apply border-gray-200 bg-transparent;
   }
 }
