@@ -3,7 +3,7 @@
   .fui-button-basic {
     @apply transition-colors duration-200 font-bold py-2 px-4 rounded;
     background-color: theme(colors.teal.500);
-    color: theme(colors.white);
+    color: theme(colors.white.DEFAULT);
   }
 
   .fui-button-basic:hover {
