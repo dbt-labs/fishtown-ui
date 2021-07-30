@@ -1,11 +1,12 @@
 @layer components {
   /* these styles aren't currently used, but serve as an example of how we might use the .css files */
   .fui-button-basic {
-    @apply bg-teal-500 text-white transition-colors duration-200 font-bold py-2 px-4 rounded;
+    @apply text-white transition-colors duration-200 font-bold py-2 px-4 rounded;
+    background-color: theme(colors.teal.500);
   }
 
   .fui-button-basic:hover {
-    @apply bg-teal-700;
+    background-color: theme(colors.teal.700);
   }
 }
 
