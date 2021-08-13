@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { Icon } from 'components/Icon/Icon';
+import { Icon } from '../Icon';
 
 export interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
@@ -28,6 +28,8 @@ export const Button: React.FC<ButtonProps> = ({
   const isLarge = size === 'large';
   const isSolidButton = buttonStyle === 'solid';
   const isOutlineButton = buttonStyle === 'border-only';
+  const isEnabledOutline = isOutlineButton && !isDisabled;
+  const isDisabledOutline = isOutlineButton && isDisabled;
   const classNames = cx(
     {
       'tw-py-1 tw-px-2': isSmall,
@@ -35,19 +37,24 @@ export const Button: React.FC<ButtonProps> = ({
       'tw-py-4 tw-px-8': isLarge,
     },
     {
-      'tw-bg-teal-500 tw-text-white hover:tw-bg-teal-700 disabled:tw-bg-gray-500': isSolidButton,
-      'tw-text-teal-100 tw-border-teal-100': isOutlineButton,
-      'tw-box-border tw-border hover:tw-border-2': isOutlineButton,
-      'disabled:hover:tw-border disabled:tw-text-gray-500 disabled:tw-border-gray-500': isOutlineButton,
+      'tw-rounded': isSolidButton,
+      'tw-bg-teal-500 tw-text-white': isSolidButton,
+      // Stateful styles
+      'hover:tw-bg-teal-700 disabled:tw-bg-gray-500': isSolidButton,
+    },
+    {
+      'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
+      // Stateful styles
+      'tw-text-teal-800 tw-border-teal-800 tw-bg-teal-800': isEnabledOutline,
+      'hover:tw-text-white focus:tw-text-white': isEnabledOutline,
+      'tw-bg-opacity-0 hover:tw-bg-opacity-100 focus:tw-bg-opacity-100': isEnabledOutline,
+      'tw-text-white tw-border-gray-500 tw-bg-gray-500': isDisabledOutline,
     },
     'tw-transition-colors',
     'tw-duration-200',
     'tw-font-bold',
-    'tw-rounded',
     'tw-select-none',
     // Stateful styles
-    'hover:tw-bg-teal-700',
-    'disabled:tw-bg-gray-500',
     'disabled:tw-cursor-not-allowed',
     className
   );
@@ -60,7 +67,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={classNames}
       {...props}
     >
-      {icon && <Icon icon={icon}></Icon>}
+      {icon && <Icon className={'tw-mr-1'} icon={icon}></Icon>}
       {children}
     </button>
   );
