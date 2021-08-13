@@ -55,7 +55,9 @@ export const Button: React.FC<ButtonProps> = ({
     'tw-font-bold',
     'tw-select-none',
     // Stateful styles
-    'disabled:tw-cursor-not-allowed',
+    {
+      'tw-cursor-not-allowed': isDisabled,
+    },
     className
   );
 
