@@ -1,10 +1,13 @@
 import * as React from 'react';
 import cx from 'classnames';
-import { Icon } from '../Icon';
 import { useState } from 'react';
 
 export interface TabProps {
-  contents: string;
+  // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role
+  // This id should be used as aria-labelledby on a role="tabpanel"
+  // to let screenreaders link content to tab.
+  ariaLabelledById?: string;
+  label: string;
   isDisabled?: boolean;
   onClick?(): any;
 }
@@ -19,45 +22,61 @@ export interface TabsProps {
   isDisabled?: boolean;
 }
 
-const Tab: React.FC<TabParams> = ({ contents, isDisabled, onClick, isSelected }) => {
+const Tab: React.FC<TabParams> = ({
+  ariaLabelledById,
+  label,
+  isDisabled,
+  onClick,
+  isSelected,
+}) => {
+  const yPadding = 'tw-py-4';
+
   const classNames = cx(
     'tw-px-2.5',
-    'tw-py-4',
-    'tw-box-border',
-    'tw-border-teal-800',
+    yPadding,
     'tw-text-teal-800',
     'tw-font-medium',
-    'tw-relative'
+    'tw-relative',
+    'tw-box-border'
   );
 
   const visibleTextClassNames = cx(
     {
-      'tw-border-b-4': isSelected,
-      'tw-font-medium': isSelected,
-      'tw-font-extralight': !isSelected,
+      'tw-border-b-4 tw-border-teal-800': isSelected,
+      'tw-font-bold': isSelected,
+      'tw-border-transparent tw-font-normal': !isSelected,
     },
+    'tw-transition-colors',
+    'tw-duration-200',
+    'tw-m-auto',
     'tw-text-center',
     'tw-absolute',
     'tw-inset-0',
-    'tw-leading-10'
+    yPadding
   );
   return (
     <button
       className={classNames}
       onClick={onClick}
-      disabled={isDisabled || isSelected}
       role="tab"
+      id={ariaLabelledById}
+      // A user should still be able to focus on the current tab
+      // to learn its name even though it's disabled.
+      tabIndex={0}
+      disabled={isDisabled}
+      aria-selected={isSelected}
     >
       <div aria-hidden="true" className={'tw-opacity-0'}>
-        {contents}
+        {label}
       </div>
-      <div className={visibleTextClassNames}>{contents}</div>
+      <div className={visibleTextClassNames}>{label}</div>
     </button>
   );
 };
 
 export const Tabs: React.FC<TabsProps> = ({ isDisabled, tabs, ariaLabel }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   if (!tabs) return null;
   return (
     <div role="tablist" aria-label={ariaLabel}>
