@@ -40,14 +40,14 @@ export const Button: React.FC<ButtonProps> = ({
       'tw-rounded': isSolidButton,
       'tw-bg-teal-500 tw-text-white': isSolidButton,
       // Stateful styles
-      'hover:tw-bg-teal-700 disabled:tw-bg-gray-500': isSolidButton,
+      'hover:tw-bg-teal-800 disabled:tw-bg-gray-500': isSolidButton,
     },
     {
       'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
       // Stateful styles
-      'tw-text-teal-800 tw-border-teal-800 tw-bg-teal-800': isEnabledOutline,
+      'tw-text-teal-800 tw-border-teal-800 tw-bg-transparent': isEnabledOutline,
       'hover:tw-text-white focus:tw-text-white': isEnabledOutline,
-      'tw-bg-opacity-0 hover:tw-bg-opacity-100 focus:tw-bg-opacity-100': isEnabledOutline,
+      'hover:tw-bg-teal-800': isEnabledOutline,
       'tw-text-white tw-border-gray-500 tw-bg-gray-500': isDisabledOutline,
     },
     'tw-transition-colors',
