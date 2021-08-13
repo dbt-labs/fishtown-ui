@@ -6,7 +6,7 @@ export interface TabProps {
   // https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role
   // This id should be used as aria-labelledby on a role="tabpanel"
   // to let screenreaders link content to tab.
-  ariaLabelledById?: string;
+  id?: string;
   label: string;
   isDisabled?: boolean;
   onClick?(): any;
@@ -22,13 +22,7 @@ export interface TabsProps {
   isDisabled?: boolean;
 }
 
-const Tab: React.FC<TabParams> = ({
-  ariaLabelledById,
-  label,
-  isDisabled,
-  onClick,
-  isSelected,
-}) => {
+const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }) => {
   const yPadding = 'tw-py-4';
 
   const classNames = cx(
@@ -59,7 +53,7 @@ const Tab: React.FC<TabParams> = ({
       className={classNames}
       onClick={onClick}
       role="tab"
-      id={ariaLabelledById}
+      id={id}
       // A user should still be able to focus on the current tab
       // to learn its name even though it's disabled.
       tabIndex={0}
