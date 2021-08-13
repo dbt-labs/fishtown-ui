@@ -1,7 +1,7 @@
 import * as React from 'react';
 import cx from 'classnames';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
-import { Icon } from 'index';
+import { Icon } from 'components/Icon/Icon';
 
 export interface ButtonProps {
   size?: 'small' | 'medium' | 'large';
