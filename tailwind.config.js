@@ -24,6 +24,7 @@ module.exports = {
           ...colors.teal,
           500: 'var(--color-teal-500)',
           700: 'var(--color-teal-700)',
+          800: 'var(--color-teal-800)',
         },
         orange: {
           ...colors.orange,
