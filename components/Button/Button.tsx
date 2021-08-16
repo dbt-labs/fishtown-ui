@@ -46,8 +46,8 @@ export const Button: React.FC<ButtonProps> = ({
       'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
       // Stateful styles
       'tw-text-teal-800 tw-border-teal-800 tw-bg-transparent': isEnabledOutline,
-      'hover:tw-text-white focus:tw-text-white': isEnabledOutline,
-      'hover:tw-bg-teal-800 focus:tw-bg-teal-800': isEnabledOutline,
+      'hover:tw-text-white focus:tw-text-white active:tw-text-white': isEnabledOutline,
+      'hover:tw-bg-teal-800 focus:tw-bg-teal-800 active:tw-bg-teal-800': isEnabledOutline,
       'tw-text-white tw-border-gray-500 tw-bg-gray-500': isDisabledOutline,
     },
     'tw-transition-colors',
