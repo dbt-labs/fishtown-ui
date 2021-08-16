@@ -26,7 +26,8 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
   const yPadding = 'tw-py-4';
 
   const classNames = cx(
-    'tw-px-2.5',
+    'tw-px-3',
+    'tw-mx-2.5',
     yPadding,
     'tw-text-teal-800',
     'tw-font-medium',
