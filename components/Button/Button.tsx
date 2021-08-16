@@ -47,7 +47,7 @@ export const Button: React.FC<ButtonProps> = ({
       // Stateful styles
       'tw-text-teal-800 tw-border-teal-800 tw-bg-transparent': isEnabledOutline,
       'hover:tw-text-white focus:tw-text-white': isEnabledOutline,
-      'hover:tw-bg-teal-800': isEnabledOutline,
+      'hover:tw-bg-teal-800 focus:tw-bg-teal-800': isEnabledOutline,
       'tw-text-white tw-border-gray-500 tw-bg-gray-500': isDisabledOutline,
     },
     'tw-transition-colors',
