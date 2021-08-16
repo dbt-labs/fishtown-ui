@@ -19,6 +19,8 @@ type TabParams = TabProps & {
 export interface TabsProps {
   tabs: TabProps[];
   ariaLabel: string;
+  // If specified, the tab with a matching id is selected
+  activeId?: string;
   isDisabled?: boolean;
 }
 
@@ -70,8 +72,20 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
   );
 };
 
-export const Tabs: React.FC<TabsProps> = ({ isDisabled, tabs, ariaLabel }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+export const Tabs: React.FC<TabsProps> = ({
+  activeId,
+  isDisabled,
+  tabs,
+  ariaLabel,
+}) => {
+  const [currentIndex, setCurrentIndex] = useState(activeId || 0);
+
+  React.useEffect(() => {
+    const index = tabs.findIndex((tab) => tab.id === activeId);
+    if (index > -1) {
+      setCurrentIndex(index);
+    }
+  }, [activeId]);
 
   if (!tabs) return null;
   return (

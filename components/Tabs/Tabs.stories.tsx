@@ -13,5 +13,9 @@ const Template: Story<TabsProps> = (args) => <Tabs {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  tabs: [{ label: 'Tab 1' }, { label: 'Tab 2' }, { label: 'Tab 3' }],
+  tabs: [
+    { label: 'Tab 1', id: 'a1' },
+    { label: 'Tab 2', id: 'a2' },
+    { label: 'Tab 3', id: 'a3' },
+  ],
 };
