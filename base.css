@@ -5,10 +5,15 @@
   --color-red-500: #e21b10;
   --color-teal-500: #38b2ac;
   --color-teal-700: #2c7a7b;
-  --color-teal-800: #047377;
+  --color-teal-900: #047377;
   --color-gray-100: #f9fafb;
   --color-gray-200: #cbd5e0;
+  --color-gray-300: #d1d5db;
   --color-gray-400: #a0aec0;
   --color-gray-500: #a9a9a9;
+  --color-gray-cool-100: #f3f4f6;
+  --color-gray-cool-200: #e5e7eb;
+  --color-gray-cool-600: #4b5563;
+  --color-gray-cool-700: #374151;
   --color-shadow: rgba(0, 0, 0, 0.15);
 }

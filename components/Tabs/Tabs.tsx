@@ -25,32 +25,40 @@ export interface TabsProps {
 }
 
 const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }) => {
-  const yPadding = 'tw-py-4';
-
   const classNames = cx(
-    'tw-px-3',
+    {
+      'tw-border-teal-900 tw-text-teal-900': isSelected,
+      'tw-border-transparent tw-text-gray-cool-700': !isSelected,
+    },
+    'tw-border-b-4',
+    'tw-px-0.5',
     'tw-mx-2.5',
-    yPadding,
-    'tw-text-teal-800',
+    'tw-py-3',
     'tw-font-medium',
     'tw-relative',
-    'tw-box-border'
+    'tw-box-border',
+    'tw-transition-colors',
+    'tw-duration-200',
+    'hover:tw-text-teal-900',
+    'focus:tw-outline-none',
+    'tw-group' // For focus state
   );
+
+  const textHorizontalPadding = 'tw-px-2.5';
 
   const visibleTextClassNames = cx(
     {
       'tw-border-gray-500 tw-text-gray-500': isDisabled,
-      'tw-border-b-4 tw-border-teal-800': isSelected,
       'tw-font-bold': isSelected,
       'tw-border-transparent tw-font-normal': !isSelected,
     },
-    'tw-transition-colors',
-    'tw-duration-200',
     'tw-m-auto',
     'tw-text-center',
-    'tw-absolute',
-    'tw-inset-0',
-    yPadding
+    // Focus state
+    'tw-py-1',
+    textHorizontalPadding,
+    'tw-rounded-full',
+    'group-focus:tw-bg-gray-cool-200'
   );
   return (
     <button
@@ -64,7 +72,11 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
       disabled={isDisabled}
       aria-selected={isSelected}
     >
-      <div aria-hidden="true" className={'tw-opacity-0'}>
+      {/* We need to have hidden bold text to ensure the tabs never move on bold. */}
+      <div
+        aria-hidden="true"
+        className={`tw-opacity-0 tw-h-px tw-font-bold ${textHorizontalPadding}`}
+      >
         {label}
       </div>
       <div className={visibleTextClassNames}>{label}</div>
