@@ -44,12 +44,12 @@ export const Button: React.FC<ButtonProps> = ({
     },
     {
       'focus:outline-none focus:tw-ring-teal-900 focus:tw-ring-offset-2 focus:tw-ring-2': isOutlineButton,
-      'tw-shadow-sm': isOutlineButton,
+      'tw-shadow-sm tw-border-gray-300': isOutlineButton,
       'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
       // Stateful styles
-      'tw-text-teal-900 tw-border-teal-900 tw-bg-white': isEnabledOutline,
+      'tw-text-gray-cool-600 tw-bg-white': isEnabledOutline,
       'hover:tw-bg-gray-cool-100 active:tw-bg-gray-cool-100': isEnabledOutline,
-      'tw-text-gray-500 tw-border-gray-500 tw-bg-gray-cool-200': isDisabledOutline,
+      'tw-text-gray-cool-400 tw-bg-gray-cool-200': isDisabledOutline,
     },
     'tw-transition-colors',
     'tw-duration-200',
