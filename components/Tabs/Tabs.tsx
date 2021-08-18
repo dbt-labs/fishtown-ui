@@ -48,7 +48,7 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
 
   const visibleTextClassNames = cx(
     {
-      'tw-border-gray-500 tw-text-gray-500': isDisabled,
+      'tw-border-gray-500 tw-text-gray-500': !isSelected && isDisabled,
       'tw-font-bold': isSelected,
       'tw-border-transparent tw-font-normal': !isSelected,
     },
