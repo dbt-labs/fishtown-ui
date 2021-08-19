@@ -2,11 +2,10 @@ const { colors, fontSize } = require('./old-default-theme');
 
 module.exports = {
   prefix: 'tw-',
-  darkMode: 'media',
+  darkMode: 'class',
   variants: {
     extend: {
-      backgroundColor: ['disabled', 'group-focus', 'dark'],
-      borderColor: ['dark'],
+      backgroundColor: ['disabled', 'group-focus'],
       opacity: ['disabled'],
     }
   },
@@ -45,12 +44,16 @@ module.exports = {
           ...colors.red,
           DEFAULT: 'var(--color-red)',
         },
-        'gray-cool': {
-          100: 'var(--color-gray-cool-100)',
-          200: 'var(--color-gray-cool-200)',
-          400: 'var(--color-gray-cool-400)',
-          600: 'var(--color-gray-cool-600)',
-          700: 'var(--color-gray-cool-700)',
+        'cool-gray': {
+          100: 'var(--color-cool-gray-100)',
+          200: 'var(--color-cool-gray-200)',
+          300: 'var(--color-cool-gray-300)',
+          400: 'var(--color-cool-gray-400)',
+          500: 'var(--color-cool-gray-500)',
+          600: 'var(--color-cool-gray-600)',
+          700: 'var(--color-cool-gray-700)',
+          800: 'var(--color-cool-gray-800)',
+          900: 'var(--color-cool-gray-900)',
         },
       },
       fontSize,
