@@ -2,9 +2,11 @@ const { colors, fontSize } = require('./old-default-theme');
 
 module.exports = {
   prefix: 'tw-',
+  darkMode: 'media',
   variants: {
     extend: {
-      backgroundColor: ['disabled', 'group-focus'],
+      backgroundColor: ['disabled', 'group-focus', 'dark'],
+      borderColor: ['dark'],
       opacity: ['disabled'],
     }
   },
@@ -22,6 +24,7 @@ module.exports = {
         },
         teal: {
           ...colors.teal,
+          400: 'var(--color-teal-400)',
           500: 'var(--color-teal-500)',
           700: 'var(--color-teal-700)',
           900: 'var(--color-teal-900)',
