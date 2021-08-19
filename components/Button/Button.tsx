@@ -44,7 +44,7 @@ export const Button: React.FC<ButtonProps> = ({
     },
     {
       'focus:outline-none focus:tw-ring-teal-900 focus:tw-ring-offset-2 focus:tw-ring-2': isOutlineButton,
-      'dark:focus:tw-ring-teal-500': isOutlineButton,
+      'dark:focus:tw-ring-active-600': isOutlineButton,
       'tw-shadow-sm tw-border-gray-300': isOutlineButton,
       'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
       // Stateful styles

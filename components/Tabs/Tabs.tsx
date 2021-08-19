@@ -27,8 +27,10 @@ export interface TabsProps {
 const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }) => {
   const classNames = cx(
     {
-      'tw-border-teal-900 tw-text-teal-900': isSelected,
-      'tw-border-transparent tw-text-gray-cool-700': !isSelected,
+      'tw-border-teal-900 dark:tw-border-active-600': isSelected,
+      'tw-text-teal-900 dark:tw-text-active-600': isSelected,
+      'tw-border-transparent': !isSelected,
+      'tw-text-cool-gray-700 dark:tw-text-cool-gray-200': !isSelected,
     },
     'tw-border-b-4',
     'tw-px-0.5',
@@ -39,7 +41,7 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
     'tw-box-border',
     'tw-transition-colors',
     'tw-duration-200',
-    'hover:tw-text-teal-900',
+    'hover:tw-text-teal-900 dark:hover:tw-text-active-600',
     'focus:tw-outline-none',
     'tw-group' // For focus state
   );
@@ -48,7 +50,8 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
 
   const visibleTextClassNames = cx(
     {
-      'tw-border-gray-500 tw-text-gray-500': !isSelected && isDisabled,
+      'tw-border-gray-500 dark:tw-border-cool-gray-200': !isSelected && isDisabled,
+      'tw-text-gray-500 dark:tw-text-cool-gray-400': !isSelected && isDisabled,
       'tw-font-bold': isSelected,
       'tw-border-transparent tw-font-normal': !isSelected,
     },
@@ -58,7 +61,7 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
     'tw-py-1',
     textHorizontalPadding,
     'tw-rounded-full',
-    'group-focus:tw-bg-gray-cool-200'
+    'group-focus:tw-bg-cool-gray-200 dark:group-focus:tw-bg-cool-gray-600'
   );
   return (
     <button

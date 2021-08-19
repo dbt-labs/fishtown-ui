@@ -44,6 +44,9 @@ module.exports = {
           ...colors.red,
           DEFAULT: 'var(--color-red)',
         },
+        active: {
+          600: 'var(--color-active-600)',
+        },
         'cool-gray': {
           100: 'var(--color-cool-gray-100)',
           200: 'var(--color-cool-gray-200)',
