@@ -3,12 +3,23 @@
   --color-transparent: transparent;
   --color-orange-500: #ff694b; /* "dbt-orange" */
   --color-red-500: #e21b10;
+  --color-active-600: #00cccc;
   --color-teal-500: #38b2ac;
   --color-teal-700: #2c7a7b;
-  --color-teal-800: #047377;
+  --color-teal-900: #047377;
   --color-gray-100: #f9fafb;
   --color-gray-200: #cbd5e0;
+  --color-gray-300: #d1d5db;
   --color-gray-400: #a0aec0;
   --color-gray-500: #a9a9a9;
+  --color-cool-gray-100: #f3f4f6;
+  --color-cool-gray-200: #e5e7eb;
+  --color-cool-gray-300: #d1d5db;
+  --color-cool-gray-400: #9ca3af;
+  --color-cool-gray-500: #6b7280;
+  --color-cool-gray-600: #4b5563;
+  --color-cool-gray-700: #374151;
+  --color-cool-gray-800: #1f2937;
+  --color-cool-gray-900: #111827;
   --color-shadow: rgba(0, 0, 0, 0.15);
 }

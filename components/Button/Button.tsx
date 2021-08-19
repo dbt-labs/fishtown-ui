@@ -38,22 +38,29 @@ export const Button: React.FC<ButtonProps> = ({
     },
     {
       'tw-rounded': isSolidButton,
-      'tw-bg-teal-500 tw-text-white': isSolidButton,
+      'tw-bg-teal-900 tw-text-white': isSolidButton,
       // Stateful styles
-      'hover:tw-bg-teal-800 disabled:tw-bg-gray-500': isSolidButton,
+      'hover:tw-bg-teal-500 disabled:tw-bg-gray-500': isSolidButton,
     },
     {
-      'tw-text-sm tw-rounded-md tw-box-border tw-border': isOutlineButton,
+      'focus:outline-none focus:tw-ring-offset-2 focus:tw-ring-2': isOutlineButton,
+      'focus:tw-ring-teal-900 dark:focus:tw-ring-active-600': isOutlineButton,
+      'tw-shadow-sm': isOutlineButton,
+      'tw-text-sm tw-rounded-md tw-border': isOutlineButton,
+      'tw-border-gray-300 dark:tw-border-cool-gray-500': isOutlineButton,
       // Stateful styles
-      'tw-text-teal-800 tw-border-teal-800 tw-bg-transparent': isEnabledOutline,
-      'hover:tw-text-white focus:tw-text-white active:tw-text-white': isEnabledOutline,
-      'hover:tw-bg-teal-800 focus:tw-bg-teal-800 active:tw-bg-teal-800': isEnabledOutline,
-      'tw-text-white tw-border-gray-500 tw-bg-gray-500': isDisabledOutline,
+      'tw-text-cool-gray-600 dark:tw-text-cool-gray-300': isEnabledOutline,
+      'tw-bg-white dark:tw-bg-gray-700': isEnabledOutline,
+      'hover:tw-bg-cool-gray-100 dark:hover:tw-bg-cool-gray-500': isEnabledOutline,
+      'active:tw-bg-cool-gray-100 dark:active:tw-bg-cool-gray-500': isEnabledOutline,
+      'tw-bg-cool-gray-200 dark:tw-bg-transparent': isDisabledOutline,
+      'tw-text-cool-gray-400 dark:tw-text-cool-gray-400': isDisabledOutline,
     },
     'tw-transition-colors',
     'tw-duration-200',
     'tw-font-bold',
     'tw-select-none',
+    'tw-ring-offset-white dark:tw-ring-offset-black',
     // Stateful styles
     {
       'tw-cursor-not-allowed': isDisabled,
