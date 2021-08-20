@@ -32,12 +32,11 @@ export const Button: React.FC<ButtonProps> = ({
   const isDisabledOutline = isOutlineButton && isDisabled;
   const classNames = cx(
     {
-      'tw-py-1 tw-px-2': isSmall,
+      'tw-py-1 tw-px-3.5': isSmall,
       'tw-py-2 tw-px-4': isMedium,
       'tw-py-4 tw-px-8': isLarge,
     },
     {
-      'tw-rounded': isSolidButton,
       'tw-bg-teal-900 tw-text-white': isSolidButton,
       // Stateful styles
       'hover:tw-bg-teal-500 disabled:tw-bg-gray-500': isSolidButton,
@@ -46,7 +45,7 @@ export const Button: React.FC<ButtonProps> = ({
       'focus:outline-none focus:tw-ring-offset-2 focus:tw-ring-2': isOutlineButton,
       'focus:tw-ring-teal-900 dark:focus:tw-ring-active-600': isOutlineButton,
       'tw-shadow-sm': isOutlineButton,
-      'tw-text-sm tw-rounded-md tw-border': isOutlineButton,
+      'tw-text-sm tw-border': isOutlineButton,
       'tw-border-gray-300 dark:tw-border-cool-gray-500': isOutlineButton,
       // Stateful styles
       'tw-text-cool-gray-600 dark:tw-text-cool-gray-300': isEnabledOutline,
@@ -56,6 +55,7 @@ export const Button: React.FC<ButtonProps> = ({
       'tw-bg-cool-gray-200 dark:tw-bg-transparent': isDisabledOutline,
       'tw-text-cool-gray-400 dark:tw-text-cool-gray-400': isDisabledOutline,
     },
+    'tw-rounded-md',
     'tw-transition-colors',
     'tw-duration-200',
     'tw-font-bold',
