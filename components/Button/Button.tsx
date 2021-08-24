@@ -4,8 +4,9 @@ import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { Icon } from '../Icon';
 
 export interface ButtonProps {
+  // TODO: Make sizing and names consistent with Tailwind Sizes
   size?: 'small' | 'medium' | 'large';
-  buttonStyle?: 'solid' | 'border-only';
+  buttonStyle?: 'primary' | 'secondary';
   icon?: string | IconDefinition;
   isDisabled?: boolean;
   title?: string;
@@ -15,7 +16,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   size = 'medium',
-  buttonStyle = 'solid',
+  buttonStyle = 'primary',
   icon,
   isDisabled,
   title,
@@ -26,13 +27,13 @@ export const Button: React.FC<ButtonProps> = ({
   const isSmall = size === 'small';
   const isMedium = size === 'medium';
   const isLarge = size === 'large';
-  const isSolidButton = buttonStyle === 'solid';
-  const isOutlineButton = buttonStyle === 'border-only';
+  const isSolidButton = buttonStyle === 'primary';
+  const isOutlineButton = buttonStyle === 'secondary';
   const isEnabledOutline = isOutlineButton && !isDisabled;
   const isDisabledOutline = isOutlineButton && isDisabled;
   const classNames = cx(
     {
-      'tw-py-1 tw-px-3.5': isSmall,
+      'tw-py-1 tw-px-2.5': isSmall,
       'tw-py-2 tw-px-4': isMedium,
       'tw-py-4 tw-px-8': isLarge,
     },
@@ -42,12 +43,11 @@ export const Button: React.FC<ButtonProps> = ({
       'hover:tw-bg-teal-500 disabled:tw-bg-gray-500': isSolidButton,
     },
     {
-      'focus:outline-none focus:tw-ring-offset-2 focus:tw-ring-2': isOutlineButton,
-      'focus:tw-ring-teal-900 dark:focus:tw-ring-active-600': isOutlineButton,
       'tw-shadow-sm': isOutlineButton,
       'tw-text-sm tw-border': isOutlineButton,
       'tw-border-gray-300 dark:tw-border-cool-gray-500': isOutlineButton,
       // Stateful styles
+      'dark:focus:tw-ring-active-600': isOutlineButton,
       'tw-text-cool-gray-600 dark:tw-text-cool-gray-300': isEnabledOutline,
       'tw-bg-white dark:tw-bg-gray-700': isEnabledOutline,
       'hover:tw-bg-cool-gray-100 dark:hover:tw-bg-cool-gray-500': isEnabledOutline,
@@ -62,6 +62,8 @@ export const Button: React.FC<ButtonProps> = ({
     'tw-select-none',
     'tw-ring-offset-white dark:tw-ring-offset-black',
     // Stateful styles
+    'focus:tw-outline-none focus:tw-ring-offset-2 focus:tw-ring-2',
+    'focus:tw-ring-teal-900',
     {
       'tw-cursor-not-allowed': isDisabled,
     },
@@ -76,7 +78,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={classNames}
       {...props}
     >
-      {icon && <Icon className={'tw-mr-1'} icon={icon}></Icon>}
+      {icon && <Icon className={'tw-mr-2'} icon={icon}></Icon>}
       {children}
     </button>
   );

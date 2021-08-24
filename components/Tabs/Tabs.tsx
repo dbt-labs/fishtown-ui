@@ -55,14 +55,16 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
       'tw-text-gray-500 dark:tw-text-cool-gray-400': !isSelected && isDisabled,
       'tw-font-bold': isSelected,
       'tw-border-transparent tw-font-normal': !isSelected,
+      'group-focus:tw-bg-cool-gray-200 dark:group-focus:tw-bg-cool-gray-600': !isSelected,
     },
     'tw-m-auto',
+    'tw-delay-100',
+    'tw-transition-colors',
     'tw-text-center',
     // Focus state
     'tw-py-1',
     textHorizontalPadding,
-    'tw-rounded-full',
-    'group-focus:tw-bg-cool-gray-200 dark:group-focus:tw-bg-cool-gray-600'
+    'tw-rounded-full'
   );
   return (
     <button
