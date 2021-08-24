@@ -79,7 +79,7 @@ export const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {icon && <Icon className={'tw-mr-2'} icon={icon}></Icon>}
-      {children}
+      <span>{children}</span>
     </button>
   );
 };
