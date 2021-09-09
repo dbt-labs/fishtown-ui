@@ -8,6 +8,7 @@
     "storybook-docs": "start-storybook -p 6006 --docs",
     "build-storybook": "build-storybook",
     "deploy-storybook": "storybook-to-ghpages",
+    "format": "prettier --write .",
     "test": "jest",
     "test-watch": "jest --watch",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",

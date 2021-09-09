@@ -1,4 +1,4 @@
-const theme = require("./tailwind.config");
+const theme = require('./tailwind.config');
 
 module.exports = {
   ...theme,

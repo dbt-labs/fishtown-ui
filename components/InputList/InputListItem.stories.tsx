@@ -14,7 +14,7 @@ Template.argTypes = {};
 
 export const Basic = Template.bind({});
 Basic.args = {
-    value: "value",
-    isDisabled: false,
-    index: 1,
+  value: 'value',
+  isDisabled: false,
+  index: 1,
 };

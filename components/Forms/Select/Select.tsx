@@ -63,13 +63,15 @@ export const Select: FC<SelectProps> = (props: SelectProps): React.ReactElement 
   const formatGroupLabel = useCallback(
     (data): React.ReactNode => (
       <>
-      {data.sectionHeader && <div className="fui-select__section-header">{data.sectionHeader}</div>}
-      <div className={"fui-select__grouplabel"}>
-        <div className="fui-select__grouplabel_title">{data.label}</div>
-        <div className="fui-select__grouplabel_meta">
-          {groupingMetaLabel || (data.options && data.options.length)}
+        {data.sectionHeader && (
+          <div className="fui-select__section-header">{data.sectionHeader}</div>
+        )}
+        <div className={'fui-select__grouplabel'}>
+          <div className="fui-select__grouplabel_title">{data.label}</div>
+          <div className="fui-select__grouplabel_meta">
+            {groupingMetaLabel || (data.options && data.options.length)}
+          </div>
         </div>
-      </div>
       </>
     ),
     [groupingMetaLabel]

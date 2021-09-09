@@ -8,22 +8,22 @@ export interface InputListValue {
 }
 
 export interface InputListProps {
-    /** List of the input values */
-    values: string[];
-    /** Callback triggered when the input list state changes */
-    onAdd?: () => void;
-    /** Callback triggered when the input list state changes */
-    onDelete?: (index: number) => void;
-    /** Classname(s) for the wrapping element */
-    className?: string;
-    /** Callback triggered when the input list state changes */
-    onChange?: (value: string[]) => void;
-    /** Callback triggered when the input list state changes */
-    onEdit?: (value: string, index: number) => void;
-    /** List of React Nodes */
-    children?: React.ReactNode | React.ReactNode[] | string;
-    /** A true/false toggle for the input list state, if disabled interactions are disabled */
-    isDisabled?: boolean;
+  /** List of the input values */
+  values: string[];
+  /** Callback triggered when the input list state changes */
+  onAdd?: () => void;
+  /** Callback triggered when the input list state changes */
+  onDelete?: (index: number) => void;
+  /** Classname(s) for the wrapping element */
+  className?: string;
+  /** Callback triggered when the input list state changes */
+  onChange?: (value: string[]) => void;
+  /** Callback triggered when the input list state changes */
+  onEdit?: (value: string, index: number) => void;
+  /** List of React Nodes */
+  children?: React.ReactNode | React.ReactNode[] | string;
+  /** A true/false toggle for the input list state, if disabled interactions are disabled */
+  isDisabled?: boolean;
 }
 
 const rootClassName = 'fui-input-list';

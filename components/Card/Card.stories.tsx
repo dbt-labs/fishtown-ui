@@ -15,5 +15,5 @@ Template.argTypes = {};
 
 export const Basic = Template.bind({});
 Basic.args = {
-  children: <InputList values={['This is a card', 'with an input list on it']}/>,
+  children: <InputList values={['This is a card', 'with an input list on it']} />,
 };
