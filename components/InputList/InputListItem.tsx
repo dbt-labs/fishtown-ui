@@ -2,18 +2,18 @@ import React, { FC } from 'react';
 import { Icon } from '../Icon/Icon';
 
 export interface InputListItemProps {
-    /** Value of the Input */
-    value: string;
-    /** Input index in list */
-    index: number;
-    /** Classname(s) for the wrapping element */
-    className?: string;
-    /** A true/false toggle for the input state, if disabled interactions are disabled */
-    isDisabled?: boolean;
-    /** Callback triggered when the input list item state changes */
-    onDelete?: (index: number) => void;
-    /** Callback triggered when the input list item state changes */
-    onEdit?: (value: string, index: number) => void;
+  /** Value of the Input */
+  value: string;
+  /** Input index in list */
+  index: number;
+  /** Classname(s) for the wrapping element */
+  className?: string;
+  /** A true/false toggle for the input state, if disabled interactions are disabled */
+  isDisabled?: boolean;
+  /** Callback triggered when the input list item state changes */
+  onDelete?: (index: number) => void;
+  /** Callback triggered when the input list item state changes */
+  onEdit?: (value: string, index: number) => void;
 }
 
 const rootClassName = 'fui-input-list-item';
@@ -32,7 +32,7 @@ export const InputListItem: FC<InputListItemProps> = ({
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     if (onEdit) {
       onEdit(e.target.value, index);
     }

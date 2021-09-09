@@ -18,7 +18,8 @@ export const groupedOptions: SelectOption[] = options.reduce<SelectOption[]>(
   (acc: SelectOption[], item: SelectOption) => {
     const even = 0 === parseInt(item?.value ?? '0', 10) % 2;
     const index = even ? 0 : 1;
-    acc[index].options = [...acc[index].options, item];
+    const existingOptions = acc[index].options ?? [];
+    acc[index].options = [...existingOptions, item];
 
     return acc;
   },
