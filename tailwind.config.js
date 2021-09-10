@@ -6,8 +6,8 @@ module.exports = {
   variants: {
     extend: {
       backgroundColor: ['disabled', 'group-focus'],
-      opacity: ['disabled']
-    }
+      opacity: ['disabled'],
+    },
   },
   theme: {
     extend: {

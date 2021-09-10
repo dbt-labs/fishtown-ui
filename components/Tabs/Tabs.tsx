@@ -103,13 +103,14 @@ export const Tabs: React.FC<TabsProps> = ({
     if (index > -1) {
       setCurrentIndex(index);
     }
-  }, [activeId]);
+  }, [activeId, tabs]);
 
   if (!tabs) return null;
   return (
     <div role="tablist" aria-label={ariaLabel}>
       {tabs.map((tab, index) => (
         <Tab
+          key={tab.id}
           {...tab}
           onClick={() => {
             setCurrentIndex(index);
