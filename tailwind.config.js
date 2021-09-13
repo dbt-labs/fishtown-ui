@@ -46,6 +46,7 @@ module.exports = {
         },
         active: {
           600: 'var(--color-active-600)',
+          700: 'var(--color-active-700)',
         },
         'cool-gray': {
           100: 'var(--color-cool-gray-100)',
@@ -57,6 +58,11 @@ module.exports = {
           700: 'var(--color-cool-gray-700)',
           800: 'var(--color-cool-gray-800)',
           900: 'var(--color-cool-gray-900)',
+        },
+        'true-gray': {
+          ...colors['true-gray'],
+          600: 'var(--color-true-gray-600)',
+          700: 'var(--color-true-gray-700)',
         },
       },
       fontSize,
