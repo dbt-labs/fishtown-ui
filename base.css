@@ -4,6 +4,7 @@
   --color-orange-500: #ff694b; /* "dbt-orange" */
   --color-red-500: #e21b10;
   --color-active-600: #00cccc;
+  --color-active-700: #00bbbb;
   --color-teal-500: #38b2ac;
   --color-teal-700: #2c7a7b;
   --color-teal-900: #047377;
@@ -21,5 +22,7 @@
   --color-cool-gray-700: #374151;
   --color-cool-gray-800: #1f2937;
   --color-cool-gray-900: #111827;
+  --color-true-gray-600: #4a4a4a;
+  --color-true-gray-700: #3a3a3a;
   --color-shadow: rgba(0, 0, 0, 0.15);
 }

@@ -27,8 +27,8 @@ export interface TabsProps {
 const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }) => {
   const classNames = cx(
     {
-      'tw-border-teal-900 dark:tw-border-active-600': isSelected,
-      'tw-text-teal-900 dark:tw-text-active-600': isSelected,
+      'tw-border-teal-900 dark:tw-border-active-700': isSelected,
+      'tw-text-teal-900 dark:tw-text-active-700': isSelected,
       'tw-border-transparent': !isSelected,
       'tw-text-cool-gray-700 dark:tw-text-cool-gray-200': !isSelected,
     },
@@ -42,7 +42,7 @@ const Tab: React.FC<TabParams> = ({ id, label, isDisabled, onClick, isSelected }
     'tw-box-border',
     'tw-transition-colors',
     'tw-duration-200',
-    'hover:tw-text-teal-900 dark:hover:tw-text-active-600',
+    'hover:tw-text-teal-900 dark:hover:tw-text-active-700',
     'focus:tw-outline-none',
     'tw-group' // For focus state
   );
