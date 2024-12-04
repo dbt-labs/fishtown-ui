@@ -1,3 +1,15 @@
+# ***Archival Notice***
+This repository has been archived.
+
+As a result all of its historical issues and PRs have been closed.
+
+Please *do not clone* this repo without understanding the risk in doing so:
+- It may have unaddressed security vulnerabilities
+- It may have unaddressed bugs
+
+<details>
+   <summary>Click for historical readme</summary>
+
 # Fishtown UI 🎨🐠
 
 The design implementation used at Fishtown Analytics.
@@ -44,9 +56,9 @@ module.exports = {
 We [prefix all Tailwind classes](https://tailwindcss.com/docs/configuration#prefix) with `tw-` to avoid conflicts with existing styles.
 
 ```html
-<nav class="tw-bg-orange tw-p-6">
-  <div class="tw-text-white tw-mr-6">
-    <span class="tw-font-semibold tw-text-xl tw-tracking-tight">
+<nav class=&quot;tw-bg-orange tw-p-6&quot;>
+  <div class=&quot;tw-text-white tw-mr-6&quot;>
+    <span class=&quot;tw-font-semibold tw-text-xl tw-tracking-tight&quot;>
       Fishtown UI
     </span>
   </div>
@@ -74,7 +86,7 @@ const LogInButton: React.FC = () => {
 export default LogInButton;
 ```
 
-## <a name="updating-fui-node"></a>Updating Fishtown UI node module
+## <a name=&quot;updating-fui-node&quot;></a>Updating Fishtown UI node module
 
 If you are in a repo and having trouble updating from a tag to another:
 
@@ -97,3 +109,4 @@ Read our [contributing guide](https://ui.fishtownanalytics.com/?path=/docs/docs-
 ## License
 
 [Apache License, Version 2.0](LICENSE)
+
